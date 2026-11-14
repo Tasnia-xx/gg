@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://wps6uschtjf7"]
+
+[ext_resource type="Script" uid="uid://ryumjrs3u46e" path="res://Scripts/main.gd" id="1_i3vxn"]
+[ext_resource type="PackedScene" uid="uid://u85763vqedhw" path="res://SCENES/player.tscn" id="1_xh1h4"]
+[ext_resource type="PackedScene" uid="uid://mk27khp5ph6q" path="res://Lvls/level3.tscn" id="2_ac0l5"]
+
+[node name="MAIN" type="Node2D" unique_id=724113602]
+script = ExtResource("1_i3vxn")
+
+[node name="PLAYER" parent="." unique_id=1608405292 instance=ExtResource("1_xh1h4")]
+visible = false
+position = Vector2(74, 433.00003)
+
+[node name="LevelRoot" parent="." unique_id=728602267 instance=ExtResource("2_ac0l5")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=529987733]
+
+[node name="Fade" type="ColorRect" parent="CanvasLayer" unique_id=415641507]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
